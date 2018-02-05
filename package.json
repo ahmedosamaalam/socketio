@@ -1,14 +1,16 @@
 {
   "name": "socket",
   "version": "1.0.0",
-  "description": "SocketIo",
-  "main": "index.js",
+  "description": "",
+  "main": "cd server/server.js",
   "scripts": {
-    "start": "node server/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node cd server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "engine" : "8.5.0",
-  "author": "AhmedOsamaAlam",
+  "engines" : {
+    "node": "8.5.0"
+  },
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2"
