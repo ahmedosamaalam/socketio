@@ -5,6 +5,20 @@
     <title>Socket IO</title>
   </head>
   <body>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis amet id facilis quam totam porro magni recusandae dolor vel quidem iusto commodi sint sunt provident est dolorem placeat, quisquam, ea.</p>
+    <h1>hello</h1>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+          var socket = io();
+
+          socket.on('connect',()=>{
+            console.log('Connected to the server');
+          });
+
+          socket.on('disconnect',()=>{
+            console.log('disconnect from the server');
+          });
+
+    </script>
   </body>
 </html>
