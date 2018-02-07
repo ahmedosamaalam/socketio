@@ -22,6 +22,22 @@ io.on("connection", (socket)=>{
   //       email:'asd@gmail.com'}
   // });
 
+//Message from user whenever new user connect
+  socket.emit('newMessage',{
+    success: true,
+    from: 'Admin',
+    message: "Welcome to the chat room",
+    data: new Date().getTime()
+  });
+// Broadcast message whenever someone join the chatroom
+  socket.broadcast.emit('newMessage',{
+    success: true,
+    from: 'Admin',
+    message: "New use joined",
+    data: new Date().getTime()
+  });
+
+
   socket.on('createMessage',function (userMessageData) {
     console.log('Message from  user',userMessageData);
     io.emit('newMessage',{
