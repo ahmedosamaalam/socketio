@@ -10,11 +10,22 @@
     <script src="/socket.io/socket.io.js"></script>
     <script>
           var socket = io();
-
+          //Stablish a connection
           socket.on('connect',()=>{
             console.log('Connected to the server');
           });
 
+          // socket.emit('createMessage',{
+          //   success:true,
+          //   message:'Hey'
+          // });
+
+          //message recieve from the server
+          socket.on('newMessage',function (messageData) {
+           console.log(messageData );
+          });
+
+          //disconnect connection
           socket.on('disconnect',()=>{
             console.log('disconnect from the server');
           });
